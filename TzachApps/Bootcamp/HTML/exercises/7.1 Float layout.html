@@ -1,0 +1,84 @@
+<!-- Tzach Mordechai -->
+<!-- 7.1 Refactor with styling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.1 Refactor with styling</title>
+    <style>
+         * {
+            margin: 0px;
+            padding: 0px;
+            /* take into account the padding and the border */
+            box-sizing: border-box;
+
+        }
+        .clr{
+            clear: both;
+        }
+         .container{
+            border: 2px #777 solid;
+            max-width:80%;
+            height: 720px;
+            margin: auto;            
+            padding: 0px 200px 0px 200px;
+        }
+         #Header{
+            background: rgb(221, 146, 7);
+            border: 2px #777 solid;
+            height: 100px;
+            width: 80%;
+            text-align: center;
+            margin: 5px 0px 5px 0px ;
+        }
+        #Side{
+            background: rgb(3, 100, 16);
+            border: 2px #777 solid;
+            height: 500px;    
+            text-align: left;
+            padding-left: 20px;
+            float: left;
+            width: 20%;
+        }
+        #Main{
+            background: rgb(135, 5, 158);
+            border: 2px #777 solid;
+            height: 500px;            
+            text-align: right;
+            padding-right: 20px;
+            float: left;
+            width: 59%;
+            margin-left: 1%;
+        }
+        #Footer{
+            background: rgb(19, 71, 184);
+            border: 2px #777 solid;
+            height: 100px;
+            text-align: center;
+            width: 80%;
+            margin-top: 5px;
+        }
+        div{
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="Header" class="box">
+            <p>Header</p>
+        </div>
+        <div id="Side" class="box">
+            <p>Side</p>
+        </div>       
+        <div id="Main" class="box">
+            <p>Main</p>
+        </div>
+         <!-- clear -->
+         <div class="clr"></div>
+        <div id="Footer" class="box">
+            <p>Footer</p>
+        </div>
+</body>
+</html>

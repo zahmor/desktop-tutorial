@@ -1,0 +1,47 @@
+<!-- Tzach Mordechai -->
+<!-- 3.1 Forms -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3.1 Forms</title>
+</head>
+
+<body>
+  <form action="process.php">
+    <!-- Email -->
+    <div>
+      <label for="email ">Email:</label><br>
+      <input type="email" name="email" id="email" placeholder="Enter an email">
+    </div>
+    <!-- Password -->
+    <div>
+      <br><label for="password ">Password:</label><br>
+      <input type="password" name="password" id="password">
+    </div>
+    <div>
+      <!-- Age -->
+      <div>
+        <br><label for="age">Age:</label><br>
+        <input type="number" name="age" id="age">
+      </div>
+      <!-- Tell us -->
+      <br> <label for="message">Tell us a little about yourself:</label> <br>
+      <textarea name="message" id="message" cols="50" rows=5></textarea>
+    </div>
+    <!-- Agree terms -->
+    <div>
+      <label for="membership"></label><br>
+      <input type="checkbox" name="likes" value="Agreeterms" id="likes"> I agree to the
+      <a href="https://bing.com" target="_blank"> terms of service </a>
+    </div>
+    <!-- Sign up -->
+    <!-- Input submit -->
+    <br><input type="submit" value="Sign up">
+
+  </form>
+</body>
+
+</html>

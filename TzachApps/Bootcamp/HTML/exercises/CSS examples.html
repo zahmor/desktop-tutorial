@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the preffered method -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>CSS selectors </title>
+    <style>
+        /* body styling  */
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Roboto';
+            font-size: 18px;
+            line-height: 1.6em;
+        }
+
+        /* Internal css */
+        /* . is for class  # for id */
+        h2#green-heading {
+            color: green;
+        }
+
+        .primary-heading {
+            color: blue;
+        }
+
+        #welcome {
+            background-color: cornflowerblue;
+        }
+
+        /* multiple selectors */
+        #welcome,
+        #about {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+
+        /* nested selctors */
+        #welcome p {
+            font-size: 40px;
+        }
+
+        #welcome p span {
+            font-weight: bold;
+        }
+
+        #about p span {
+            font-style: italic;
+        }
+
+        #about {
+            color: white;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        h2 {
+            color: rgb(0, 0, 255);
+        }
+
+        h3 {
+            /* hex */
+            color: #ffffff;
+        }
+
+        #box-1 {
+            background-color: royalblue;
+            /* border-width: 3px ;    
+            border-color: red;  
+            border-style: solid; */
+            /* you can use also doted */
+            border: 3px solid red;
+            border-radius: 10px;
+        }
+
+        #box-2 {
+            background: red;
+            color: #ffffff;
+            border-top: blue solid 3px;
+            border-top-left-radius: 10px;
+        }
+
+        #box-3 {
+            /* background-repeat: no-repeat;
+            background-position: -100px -100px 0;
+            background-size: cover;
+            background-image: url('./images/stars.jpg'); */
+            background: url('./images/stars.jpg') no-repeat center center/cover;
+            height: 300px;
+            width: 600px;
+            color: whitesmoke;
+        }
+
+        #box-4 {
+            background: url(./images/stars\ png.png) no-repeat center center;
+            background-attachment: fixed;
+
+        }
+        .container{
+            display:flex;
+        }
+        .box{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4rem;
+            /* h-shadow , v-shadow, blur, color */
+            text-shadow: 0.2rem 0.2rem 0.7rem steelblue;
+            /* h-shadow , v-shadow, color */
+            text-shadow: 0.2rem 0.2rem steelblue;
+            color:  white;
+            padding: 1rem;
+            margin: 1rem;
+            background: coral;
+            color: #ffffff;
+            /* offest x, offset y, color */
+            box-shadow: 10px 10px teal;
+            /* offest x, offset y, blur-radius, color */
+            box-shadow: 10px 10px 20px teal;
+            /* negative values  or the left top corner*/
+            box-shadow: -10px -10px 20px teal;
+            /* transparency */
+            box-shadow: -10px -10px 20px rgba(0, 0, 0, 0.3); 
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h3>heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, culpa.</p>
+        </div>
+        <div class="box">
+            <h3>heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, culpa.</p>
+        </div>
+        <div class="box">
+            <h3>heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, culpa.</p>
+        </div>
+        <div class="box">
+            <h3>heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, culpa.</p>
+        </div>
+    </div>
+    <h1>test h1</h1>
+    <div id="box-1">
+        <h3>Box one </h3>
+        <p> Box one Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+    </div>
+    <br>
+    <div id="box-2">
+        <h3>Box two </h3>
+        <p> Box two Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+    </div>
+    <div id="box-3">
+        <h3>Box three </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+    </div>
+    <div id="box-4">
+        <h3>Box four </h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Sequi magnam est, in quibusdam voluptates cupiditate dignissimos quaerat inventore voluptatum.
+            Necessitatibus.</p>
+    </div>
+    <div id=welcome>
+        <h2 id="green-heading">welcome</h2>
+        <p class="primary-heading">Lorem, ipsum dolor <span> sit amet consectetur adipisicing elit. </span>
+            Mollitia, officia ut? Accusantium culpa ad modi!
+        </p>
+    </div>
+    <div>
+        <h2 id="about">About</h2>
+        <p>Lorem ipsum dolor sit, amet <span> consectetur adipisicing elit. </span> Dolores, consequatur itaque
+            voluptatem illo magni
+            unde earum magnam quaerat sed fugiat.</p>
+    </div>
+</body>
+
+</html>
+
+
+
+<!-- examples-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.1 Float layout</title>
+    <style>
+        /* css reset */
+        * {
+            margin: 0;
+            padding: 0;
+            /* take into account the padding and the border */
+            box-sizing: border-box;
+
+        }
+        .clr{
+            clear: both;
+        }
+
+        .box {
+            background: skyblue;
+            border: 2px #777 solid;
+            width: 500px;
+            /* padding on all sides */
+            padding: 20px;
+            /* padding per side */
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            /* padding shorthand= top, right, buttom, left */
+            padding: 10px, 20px, 10px, 20px;
+            /* padding top/buttom left/right */
+            padding: 10px 20px;
+            /* margin all sides */
+            margin: 20px;
+            /* padding per side */
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            /* margin shorthand= top, right, buttom, left */
+            margin: 10px, 20px, 10px, 20px;
+            /* margin top/buttom left/right */
+            margin: 10px 20px;
+            text-align: center;
+        }
+
+        .box h3 {
+            padding-bottom: 10px;
+        }
+        .container{
+            max-width: 960px;
+            margin: auto;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4em;
+        }
+        #box-2{
+            float: left;
+            width: 70%;
+        }
+        #box-3{
+            float: right;
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="box-1" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, velit.</p>
+        </div>
+        <div id="box-2" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, velit.</p>
+        </div>
+        <!-- clear -->
+        <div class="clr"></div>
+        <div id="box-3" class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta, velit.</p>
+        </div>
+
+        <div class="box">
+            <h3>Box One</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, officiis?</p>
+        </div>
+        <div class="box">
+            <h3>Box Two</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, officiis?</p>
+        </div>
+        <div class="box">
+            <h3>Box Three</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, officiis?</p>
+        </div>
+    </div>
+</body>
+
+</html>

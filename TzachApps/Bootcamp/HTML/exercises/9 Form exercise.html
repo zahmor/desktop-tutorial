@@ -1,0 +1,119 @@
+<!-- Tzach Mordechai -->
+<!-- 9 Form exercise -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>9 Form exercise</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #334d7c;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+    }
+    a {
+      text-decoration: none;
+    }
+    #container {
+      margin: auto;
+      margin-top: 40px;
+      max-width: 500px;
+      padding: 20px;
+    }
+    .form-wrap {
+      background-color: white;
+      padding: 25px 25px;
+    }
+
+    .form-wrap h1,
+    .form-wrap p {
+      text-align: center;      
+    }
+    .form-wrap .form-class {            
+      margin-bottom: 10px;
+    }
+    .form-wrap .form-class input {
+      width: 100%;
+      padding: 10px;
+      border: rgb(145, 137, 137) thin solid;     
+    }
+    .form-wrap button {
+      width: 100%;      
+      background-color: #3ea58b;
+      padding: 12px;
+      margin-top: 25px;
+    }
+    .form-wrap button:hover {
+      background-color: #2e8a7a;
+    }
+    .form-wrap .bottom-text {
+      margin-top: 25px;
+      font-size: 12px;    
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    footer a {
+      color: #34c09d;       
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="form-wrap">
+      <h1>Sign Up</h1>
+      <p> It's free and only takes a minute </p>
+      <form>
+        <div class="form-class">
+          <label for="first-name">First Name</label>          
+          <input type="text" name="firstName" />
+        </div>
+        <div class="form-class">
+          <label for="last-name">Last Name</label>
+          <input type="text" name="lastName" />
+        </div>
+        <div class="form-class">
+          <label for="email">Email</label>
+          <input type="email" name="email" />
+        </div>
+        <div class="form-class">
+          <label for="password">Password</label>
+          <input type="password" name="password" />
+        </div>
+        <div class="form-class">
+          <label for="passwordConfirm">Confirm Password</label>
+          <input type="password" name="paswordConfirm" />
+        </div>
+        <button type="submit" class="btn">Sign up</button>
+        <p class="bottom-text">
+          By clicking the Sign up button, you agree to our
+          <a href="#">Terms & Conditions</a> 
+          and
+          <a href="#">Privacy Policy</a>
+        </p>
+      </form>
+    </div>
+    <footer>
+      <p>Already have an account? <a href="#">Login Here</a></p>
+    </footer>
+  </div>
+</body>
+
+</html>

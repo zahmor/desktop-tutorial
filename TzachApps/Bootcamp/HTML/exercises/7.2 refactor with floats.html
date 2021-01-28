@@ -1,0 +1,69 @@
+<!-- Tzach Mordechai -->
+<!-- 7.2 Refactor with styling -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>7.2 Refactor with styling</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            /* take into account the padding and the border */
+            box-sizing: border-box;
+
+        }
+        .clr{
+            clear: both;
+        }
+        #FirstP {
+            background: rgba(229, 255, 0, 0.637);
+            height: 100px;
+            width: 600px;
+            font-family: 'Roboto';
+        }
+
+        #desc {
+            font-size: 18px;
+            color: seagreen;
+            padding: 5px;
+        }
+        .card {
+            height: 100px;
+            width: 300px;
+            margin: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            border-radius: 5px; /* 5px rounded corners */
+        }
+        li{
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="FirstP">
+        <h1> Tzach Mordechai</h1>
+        <h2> Programmer </h2>
+    </div>
+    <div id="desc"> A description of self: I love to run when it rains. </div>
+    <!-- clear -->
+    
+    <p> A list of social links:
+        <ul>
+            <li class="card"> <a href="https://Facebook.com" target="_blank"> Facebook </a> </li>
+            <li class="card"> <a href="https://Linkedin.com" target="_blank"> Linkedin </a> </li>            
+            <li class="card"> <a href="https://Twitter.com" target="_blank"> Twitter </a> </li>
+        </ul>
+    </p>
+    <div class="clr"></div>
+    <!-- Image from the local computer -->
+    <img src="/images/Cloud.jpg" alt="Tzach">
+</body>
+
+</html>

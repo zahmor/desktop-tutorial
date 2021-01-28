@@ -1,0 +1,67 @@
+<!-- Tzach Mordechai -->
+<!-- 9.3 Positioning -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9.3 Positioning</title>
+  <style>
+     .clr{
+            clear: both;
+        }
+    #one {
+      width: 300px;
+      height: 300px;
+      background: rgb(15, 222, 230);
+      border-style: solid;
+      /* margin: 50px; */
+      /* font-size: 26px; */
+    }
+
+    #two {
+      width: 200px;
+      height: 200px;
+      background: rgb(15, 222, 230);
+      border-style: solid;
+      /* we nee it to be relative to the ourter div */
+      position: relative;
+      top: -100px;
+      left: 180px;
+    }
+    #three {
+      width: 700px;
+      height: 200px;
+      background: rgb(15, 222, 230);
+      border-style: solid;
+      /* we nee it to be relative to the ourter div */
+      position: relative;
+      top: -150px;
+
+    }
+    #four {
+      width: 150px;
+      height: 750px;
+      background: rgb(15, 222, 230);
+      border-style: solid;
+      /* we nee it to be relative to the ourter div */
+      position: absolute;
+      top: 10px;
+      left: 500px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="one"> div one </div>
+  <div id="two"> div two </div>
+    <!-- clear -->
+    <!-- <div class="clr"></div> -->
+  <div id="three"> div three </div>
+  <div id="four"> div four </div>
+
+</body>
+
+</html>

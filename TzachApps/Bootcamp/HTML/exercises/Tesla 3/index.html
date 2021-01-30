@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,28 +12,42 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
+
+
+
 <body>
   <header>
-    <p>TESLA</p>
-    <ul>
-      <li>MODEL S</li>
-      <li>MODEL 3</li>
-      <li>MODEL X</li>
-      <li>MODEL Y</li>
-      <li>SOLAR ROOF</li>
-      <li>SOLAR PANELS</li>
-    </ul>
-    <ul>
-      <li>SHOP</li>
-      <li>TESLA ACCOUNT</li>
-      <li>BURGER</li>
-    </ul>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">TESLA</a></h1>
+        <ul class=main>
+          <li><a href="index.html"></a> MODEL S</li>
+          <li><a href="index.html"></a> MODEL 3</li>
+          <li><a href="index.html"></a> MODEL X</li>
+          <li><a href="index.html"></a> MODEL Y</li>
+          <li><a href="index.html"></a> SOLAR ROOF</li>
+          <li><a href="index.html"></a> SOLAR PANELS</li>
+        </ul>
+        <ul class=right-side>
+          <li>SHOP</li>
+          <li>TESLA ACCOUNT</li>
+          <li>BURGER</li>
+        </ul>
+      </div>
+    </nav>
+
   </header>
 
-  <section id=sub-header>
-    <p>Model 3</p>
-  </section>
-  <section id= left-side-list>
+  <div id="showcase">
+    <div class="container">
+      <div class="showcase-content">
+        <h1> Model 3 </h1>
+      </div>
+    </div>
+  </div>
+
+
+  <section id=left-side-list>
     <ul>
       <li>MODEL 3</li>
       <li>SAFETY</li>
@@ -46,14 +61,27 @@
 
     </ul>
   </section>
-  <section id=buttom-details>
-    <div id=timeto60>
-      <div>range icon</div>
-      <div>timeto60</div>
-      <div>Sicon</div>
+  <ul id=buttom-details>
+    <ul class=timeto60>
+      <li>range icon</li>
+      <li>timeto60</li>
+      <li>Sicon</li>
+      <li>From 0-60</li>
+    </ul>
+    <ul class="range">
+      <li class="range-number">353</li>
+      <li class="range-mi">mi</li>
+      <li class="range-footer">Range</li>
+    </ul>
+    <ul class="Dual-Motor">
+      <li>AWD</li>
+      <li>Dual Motor</li>
     </div>
+    <li class="order-now">
+      <a class="btn" href="Order.html">ORDER NOW</a>
+    </li>
 
-  </section>
+  </li>
 
   <footer>
     <button id=arrow-next-page>
@@ -61,4 +89,5 @@
   </footer>
 
 </body>
+
 </html>

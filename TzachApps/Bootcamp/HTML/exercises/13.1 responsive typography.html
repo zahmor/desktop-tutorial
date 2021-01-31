@@ -1,0 +1,41 @@
+<!-- Tzach Mordechai -->
+<!-- 13.1 Responsive typography -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=
+	, initial-scale=1.0">
+	<title>13.1 Responsive typography</title>
+	<style>
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background: gray;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+}
+h1 {
+  font-size: 20px;
+}
+/* // Fluid size for all screens, larger than 500px */
+@media (min-width: 500px) {
+h1 {
+    font-size: 4vw;
+  }
+}
+/* // You can do the same for a maximum size if you wish */
+@media (min-width: 1500px) {
+h1 {
+    font-size: 60px;
+  }
+}
+ 
+	</style>
+</head>
+<body>
+	<div id="widescreen"> <h1>Widescreen</h1> </div>
+	<div id="normal">Normal</div>
+	<div id="tablet"></div>
+</body>
+</html>

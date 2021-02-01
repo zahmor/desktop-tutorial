@@ -1,0 +1,77 @@
+<!-- Tzach Morderchai -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.1 Flex Basics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+         body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .flex-container {
+            background-color:#fcfd9f;
+            display: flex;
+            /* flex-direction: column-row; */
+            /* flex-wrap: wrap; */
+            flex-direction: row;
+            /* Cross axis align */
+            align-items:flex-start;
+            /* Main axis align */
+            justify-content:space-between;
+            height: 50vh;
+
+        }
+
+        .item {
+            background: #f4f4f4;
+            border: #ccc solid 2px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;            
+            flex: 0.1;    
+            width: 150px;        
+            height: 150px;
+        }
+
+        /* .item-3 {
+            flex: 2;
+        } */
+
+        .item-1 {
+            /* flex-shrink: 0; */
+            background-color: green;
+        }
+        .item-2 {
+            /* flex-grow: 1; */
+            flex-basis: 0;
+            background-color: blue;
+        }
+        .item-3 {
+            /* flex-grow: 2; */
+            flex-basis: 0;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item item-1">
+            <h3> 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3> 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3> 3</h3>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!-- Tzach Morderchai -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>href attribute</title>
+    <style>
+   
+    a{
+        text-decoration: none;
+    }
+    a::before{
+        content:"(" attr(href) ")";       
+        padding-left: 2px;
+    }
+    </style>
+</head>
+<body>
+    <div class="attribute">
+        Please visit this
+        <a href="www.appleseeds.org.il"> website</a>
+        for more information
+    </div>
+</body>
+</html>

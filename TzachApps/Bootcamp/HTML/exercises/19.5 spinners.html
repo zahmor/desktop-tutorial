@@ -1,0 +1,41 @@
+
+<!-- Tzach Morderchai -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.5</title>
+    <style>
+        
+        body{
+            line-height:1.8rem
+        }
+        .Tooltip{
+            color: red;
+            font-size: 20px;
+        }
+        .Tooltip:hover::after{
+           content: 'nice tooltip'; 
+           background: yellow;
+           color: black;
+           /* border-style: solid; */
+           border-radius:25px;
+           top: -1px;
+           position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis obcaecati sapiente,
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis obcaecati sapiente,
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis obcaecati sapiente,
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis obcaecati sapiente,
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis obcaecati sapiente,
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo officiis obcaecati sapiente, do you like 
+         ducimus optio <span class="Tooltip"> toli </span> corporis veritatis ea vitae molestias officia vero earum excepturi commodi ipsum illum quod sed? Aliquam,
+          numquam eos dignissimos quo officia,
+         tenetur vitae sit at in debitis id maiores similique dolore, deserunt architecto. Architecto, non? Quidem, repudiandae.</div>
+</body>
+</html>

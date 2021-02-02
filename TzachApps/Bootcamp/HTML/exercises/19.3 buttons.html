@@ -1,0 +1,139 @@
+<!-- Tzach Morderchai -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>19.3</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            width: 400px;
+            border: black 2px solid;
+            /* background: red; */
+            margin: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #yeah {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        #yeah::after {
+            content: "Yeah";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: red;
+            transform: translateY(-100px);
+            transition: transform 1s;
+        }
+
+        #yeah:hover::after {
+            transform: translateY(0);
+        }
+
+        #Translate::after {
+            content: "Translate";
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: black;
+            transform: translateX(-400px);
+            transition: transform 1s;
+        }
+
+        #Translate:hover::after {
+            transform: translateX(0);
+        }
+
+        #Rotate::after {
+            content: "";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* position: absolute; */
+            background: yellow;
+            /* transform-origin: right; */
+            /* transform: rotate(90); */
+            transform: rotate(90deg);
+            transform-origin: top left;
+            transition: transform 1s;
+            /* transition: all 0.3s; */
+            /* z-index: -1; */
+        }
+
+        #Rotate:hover::after {
+            transform: rotate(0);
+        }
+
+        #Scale::after {
+            content: "Scale & Opacity";
+            position: absolute;
+            background-color: black;
+            color: white;
+            /* top: 0; */
+            /* left: 0; */
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            display: flex;
+            /* flex-direction: row; */
+            align-items: center;
+            justify-content: center;
+            transition: all 1s;
+            transform: scale(3);
+        }
+
+        #Scale:hover::after {
+            transform: scale(1);
+            opacity: 1;
+
+        }
+    </style>
+    <div id=Rotate class="box">Rotate</div>
+    <div id=Translate class="box">Translate</div>
+    <div id=yeah class="box">TranslateY</div>
+    <div id=Scale class="box">Scale & Opacity</div>
+</body>
+
+</html>

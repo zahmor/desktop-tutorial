@@ -1,0 +1,181 @@
+<!-- Tzach Morderchai -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .spinner {
+            height: 10vw;
+            width: 10vw;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .spinner-1 {
+            border: 0.5rem grey solid;
+            border-top: 0.5rem blue solid;
+        }
+
+        .spinner-2 {
+            border: 0.5rem solid black;
+            border-top: 0.5rem blue solid;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .light {
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            background-color: blue;
+            position: relative;
+        }
+
+
+
+        .trafic-light-1 {
+            background-color: grey;
+            animation: flick 3s linear infinite;
+            animation-delay: 1s;
+        }
+
+        .trafic-light-1::after {
+            content: "";
+            position: absolute;
+            left: 3rem;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            background-color: grey;
+            animation: flick 3s linear infinite;
+            animation-delay: 2s;
+        }
+
+        .trafic-light-1::before {
+            content: "";
+            position: absolute;
+            right: 3rem;
+            height: 1rem;
+            width: 1rem;
+            border-radius: 50%;
+            background-color: grey;
+            animation: flick 3s linear infinite;
+        }
+
+        @keyframes flick {
+            0% {
+                background-color: grey;
+            }
+
+            33.3% {
+                background-color: blue;
+            }
+
+            66.6% {
+                background-color: grey;
+            }
+
+            100% {
+                background-color: grey;
+            }
+        }
+
+      
+
+        .trafic-light-2 {
+            background-color: blue;
+            position: relative;
+            animation: translateY 3s infinite linear;
+            animation-delay: 2s;
+
+        }
+
+        .trafic-light-2::before {
+            content: "";
+            position: absolute;
+            height: 1rem;
+            width: 1rem;
+            left: 3rem;
+            border-radius: 50%;
+            background-color: blue;
+            animation: translateY  3s infinite linear;
+            animation-delay: 1s;
+        }
+
+        .trafic-light-2::after {
+            content: "";
+            position: absolute;
+            height: 1rem;
+            width: 1rem;
+            right: 3rem;
+            border-radius: 50%;
+            background-color: blue;
+            animation: translateY  3s infinite linear;
+            /* animation-delay: 1s; */
+
+        }
+
+    
+
+        @keyframes translateY {
+            0% {
+                transform: translateY(0);
+            }
+
+            33.33% {
+                transform: translateY(0);
+            }
+
+            66.666% {
+                transform: translateY(-2rem);
+            }
+        
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="spinner-1 spinner"></div>
+        <div class="spinner-2 spinner"></div>
+        <div class="trafic-light-1 light"></div>
+        <div class="trafic-light-2 light"></div>
+    </div>
+</body>
+
+</html>

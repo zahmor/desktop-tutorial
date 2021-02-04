@@ -1,20 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24.3</title>
-  </head>
-  <body>
-    <div class="container div">
-      <div class="box box1"><h2>Header</h2></div>
-      <div class="box box2"><h2>Sidebar</h2></div>
-      <div class="box box3">
-        <h2>Content</h2>
-        <p>More content than we had before so this collumn is now quite tall</p>
-      </div>
-      <div class="box box4"><h2>Sidebar2</h2></div>
-      <div class="box box5"><h2>Footer</h2></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>24.3</title>
+  <style>
+  
+    body {
+      color: white;
+    }
+
+    .box {
+      border-radius: 2rem;
+    }
+
+    h1,
+    h2,
+    p {
+      padding: 1rem;
+    }
+
+    .container {
+      display: grid;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    @media (min-width: 801px) {
+      .container {
+        grid-template-areas:
+          "header header header"
+          "sidebar content sidebar2"
+          "footer footer footer";
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 800px) and (min-width: 501px) {
+      .container {
+        grid-template-areas:
+          "header header"
+          "sidebar content"
+          "sidebar2 sidebar2"
+          "footer footer";
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "content"
+          "sidebar2"
+          "footer";
+      }
+    }
+
+    .box1 {
+      background-color: red;
+      grid-area: header;
+    }
+
+    .box2 {
+      grid-area: sidebar;
+      background-color: blue;
+    }
+
+    .box3 {
+      grid-area: content;
+      background-color: yellowgreen;
+    }
+
+    .box4 {
+      grid-area: sidebar2;
+      background-color: purple;
+    }
+
+    .box5 {
+      grid-area: footer;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container div">
+    <div class="box box1">
+      <h2>Header</h2>
     </div>
-  </body>
+    <div class="box box2">
+      <h2>Sidebar</h2>
+    </div>
+    <div class="box box3">
+      <h2>Content</h2>
+      <p>More content than we had before so this collumn is now quite tall</p>
+    </div>
+    <div class="box box4">
+      <h2>Sidebar2</h2>
+    </div>
+    <div class="box box5">
+      <h2>Footer</h2>
+    </div>
+  </div>
+</body>
+
 </html>

@@ -1,0 +1,223 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #047488;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #bb4c1d;
+}
+
+body {
+	color: #0f1111;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.account-lists-container {
+	display: flex;
+}
+
+.nav1 {
+	height: 60px;
+	display: flex;
+	background-color: #0c0f14;
+}
+
+.nav1-left {
+	display: flex;
+}
+
+.amazon-logo {
+	margin-left: 1px;
+	width: auto;
+	padding: 2px;
+	height: 100%;
+	display: flex;
+}
+
+
+
+.border-hover:hover {
+	border: 1px solid white;
+}
+
+.nav1-logo {
+	background-image: url("");
+	width: 90px;
+	height: 30px;
+}
+
+.nav1-deliver-to {
+	display: flex;
+	width: auto;
+	height: 65px;
+}
+
+.deliver-to-link {
+	padding: 5px;
+	margin: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.deliver-to-text {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.deliver-to-link:hover {
+	color: unset;
+}
+
+.deliver-to-line-1 {
+	color: #c0bcbc;
+	font-size: 13px;
+	line-height: 14px;
+	height: 14px;
+	font-weight: 400;
+}
+
+.deliver-to-line-2 {
+	padding-bottom: 1px;
+	color: white;
+	font-size: 14px;
+	line-height: 15px;
+	font-weight: 700;
+}
+
+.nav1-middle {
+	padding: 10px;
+	height: 60px;
+	display: flex;
+	flex: 1 1 auto;
+	border-radius: 4px;
+}
+
+.nav1-list-categories {
+	display: flex;
+	flex: 1 1 0;
+	height: 42px;
+	border-radius: 3px;
+}
+
+.nav1-list-dropdown {
+	display: flex;
+	height: 42px;
+	border: 1px solid;
+	font-size: 13px;
+}
+
+.search-bar {
+	display: flex;
+	height: 42px;
+	border: none;
+	width: 100%;
+}
+
+.search-button {
+	display: flex;
+	width: 50px;
+	height: 42px;
+	border: 0px;
+	background-color: #fcbf6f;
+	background-image: url("/img/#");
+}
+
+.search-button:hover {
+	background-color: #f7ae50;
+}
+
+.nav1-right {
+	height: 60px;
+	display: flex;
+}
+
+.language-flag {
+	padding: 5px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.nav1-flag {
+	width: 25px;
+	height: 20px;
+}
+
+.nav1-right-arrow {
+	border-style: solid;
+	border-color: transparent;
+	border-top: 4px solid #a7acb2;
+}
+
+.account-lists-link,
+.returns-orders-link {
+	color: white;
+	padding: 5px;
+	display: flex;
+	align-items: flex-start;
+	flex-flow: column nowrap;
+	justify-content: center;
+	height: 50px;
+}
+
+.account-lists-line-1,
+.returns-orders-line-1 {
+	font-size: 13px;
+	height: 14px;
+}
+
+.account-lists-line-2,
+.returns-orders-line-2 {
+	display: flex;
+	font-size: 14px;
+	line-height: 15px;
+	font-weight: 600;
+}
+
+.cart-link {
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+}
+
+.cart {
+	position: relative;
+}
+
+.cart-items {
+	color: #e68404;
+	font-size: 18px;
+	font-weight: 600;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.cart-image {
+	display: flex;
+	align-items: center;
+	width: 42px;
+}
+
+.nav2 {
+	height: 35px;
+	background-color: #161d27;
+}
+
+.categories-url {
+	color: #7e9696;
+}
+
+ 

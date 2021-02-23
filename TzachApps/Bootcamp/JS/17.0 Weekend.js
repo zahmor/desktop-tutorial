@@ -1,4 +1,4 @@
-//Tzach Mordechai.  
+//Tzach Mordechai.   
 
 
 
@@ -23,7 +23,7 @@ console.log(`2.3 find next square: ${findNextSquare(625)}`);
 
 //2.4
 let findUniq = arrayUniq => { return arrayUniq.sort((a, b) => a - b).reduce((acc, currentValue, index, array) => array[0] === array[1] ? array[array.length - 1] : array[0]) };
-console.log(`2.4 findUniq: ${findUniq([1, 1, 1, 2, 1, 1])}`); //=== 0.55
+console.log(`2.4 findUniq: ${findUniq([1, 1, 1, 2, 1, 1])}`);
 
 //2.5
 let summation = N => [...Array(N + 1).keys()].reduce((acc, current) => acc + current);
@@ -96,7 +96,6 @@ function toWeirdCase(str) {
   }
   return stringReturn;
 }
-
 console.log(`5.4 to Weird Case: ${toWeirdCase('Snow on the golan hights tomorrow')}`);
 
 //5.5
@@ -108,7 +107,7 @@ let maskify = str => str.split('').map((curr, ind, arr) => ind >= arr.length - 4
 console.log(`5.6 maskify: ${maskify("4556364607935616")}`);
 
 //5.7
-let shortestWords = str => str.split(' ').reduce((acc, curr) => acc < curr.length ? acc : curr.length, 100);
+let shortestWords = str => str.split(' ').reduce((acc, curr) => acc < curr.length ? acc : curr.length, 1000);
 console.log(`5.7 shortest words: ${shortestWords('Snow on the golan hights tomorrow')}`);
 
 
@@ -135,7 +134,6 @@ console.log(`6.4 isogram: ${isogram("Dermatoglyphics")}`);
 
 
 //7
-
 Array.prototype.myFilter = function (checkElement) {
   const returnArr = [];
   for (let i = 0; i < this.length; i++) {
@@ -172,7 +170,7 @@ console.log('7.4: ' + arr.myMap(x => x * 2));
 
 
 //8
-let findPerimeter = (num1,num2) => 2*num1 +2*num2;
+let findPerimeter = (num1, num2) => 2 * num1 + 2 * num2;
 console.log(`8 find perimeter: ${findPerimeter(2, 9)}`);
 
 

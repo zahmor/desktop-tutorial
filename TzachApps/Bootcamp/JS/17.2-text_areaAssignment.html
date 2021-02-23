@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17.2</title>
+    <style>
+      .errorMessage { display: none;}
+  </style>
+</head>
+
+<body>
+    <h2>Why are you instrested in this position?</h2>
+    <textarea  name="userAnswer" class="userAnswer" cols="30" rows="10" >  </textarea>
+    <br>
+    <button class="submit">Click Here</button>
+    <p class="errorMessage">Please insert at least 100 chars</p>
+
+    <script>
+        const buttonSubmit = document.querySelector('.submit');
+        const userAnswer = document.querySelector('.userAnswer');
+        const errorMessage = document.querySelector('.errorMessage');
+        buttonSubmit.addEventListener('click', submitTxtCheckSize);
+
+        function submitTxtCheckSize() {
+
+            if (userAnswer.value.length <= 100) {
+              document.querySelector('.errorMessage').style.display = 'block';
+            }
+        }
+              
+    </script>
+</body>
+
+</html>

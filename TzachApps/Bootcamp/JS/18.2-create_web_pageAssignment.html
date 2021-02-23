@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18.2</title>
+</head>
+
+<body>
+
+  <!-- <p>How many smileys do you want to see?</p> -->
+   <!-- <input type="text"  class="numOfSmileys" > -->
+    <!-- <button class="submit">submit</button>  -->
+  <!-- <div class="smileyDiv"></div> -->
+
+
+
+  <script>
+    const p = document.createElement('p');
+			p.innerText = 'How many smileys do you want to see?';
+			document.body.appendChild(p);
+ 
+      const numOfSmileys = document.createElement('input');
+
+      const submit = document.createElement('button');
+			submit.innerText = 'Submit';
+
+ 			const div = document.createElement('div');
+ 			div.insertAdjacentElement('beforebegin', numOfSmileys);
+			div.insertAdjacentElement('beforeend', submit);
+			document.body.appendChild(div);
+//lost 
+
+    const numOfSmileys = document.querySelector('.numOfSmileys');
+    const smileyDiv = document.querySelector('.smileyDiv');
+    const img = document.createElement('img');
+    const submit = document.querySelector('.submit');
+
+
+
+
+    img.src =
+      "https://p7.hiclipart.com/preview/493/502/463/face-with-tears-of-joy-emoji-smiley-emoticon-whatsapp-emoji-thumbnail.jpg";
+    img.width = 70;
+    img.height = 70;
+
+    function printSmileys() {
+      for (let i = 0; i < Number(numOfSmileys.value); i++) {
+        const imageDuplication = img.cloneNode(true);
+        smileyDiv.appendChild(imageDuplication);
+      }
+
+    }
+    submit.addEventListener('click', () => printSmileys());
+  </script>
+
+</body>
+
+</html>

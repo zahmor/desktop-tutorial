@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>17.1</title>
+ </head>
+
+ <body>
+     <p>Lorem ipsum dolor</p>
+     <button class="increase">+</button>
+     <button class="decrease">-</button>
+
+     <script>
+         const buttonIncrease = document.querySelector('.increase');
+         const buttonDecrease = document.querySelector('.decrease');
+         buttonIncrease.addEventListener('click', increaseTxt);
+         buttonDecrease.addEventListener('click', DecreaseTxt);
+
+         const paragraph = document.querySelector('p');
+
+         function increaseTxt() {
+             let fontSize = parseInt(window.getComputedStyle(paragraph).fontSize);
+             fontSize += 5;
+             if (fontSize <= 100) {
+                 paragraph.style.fontSize = `${fontSize}px`;
+             }
+         }
+         function DecreaseTxt() {
+             let fontSize = parseInt(window.getComputedStyle(paragraph).fontSize);
+             fontSize -= 5;
+             if (fontSize >= 6) {
+                 paragraph.style.fontSize = `${fontSize}px`;
+             }
+         }
+
+
+         
+     </script>
+ </body>
+
+ </html>

@@ -5,43 +5,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>19.2</title>
+  <title>21.3</title>
 </head>
 
 <body>
 
-
-
   <script>
-    const form = document.querySelector("form[name-'verify']");
-    const inputs = document.querySelectorAll('inputs > input');
-    const submit = document.querySelectorAll("input[type='submit']");
-    console.log(form, inputs);
-    const input = e.target;
-    if (input.value && input.nextElementSibling) {
-      input.nextElementSibling.focus();
-    }
+    const users = [{
+        id: 167464,
+        firstName: "Jimmy",
+        lastName: "Arnold",
+        email: "jimmya@gmail.com",
+      },
+      {
+        id: 578447,
+        firstName: "Martha",
+        lastName: "Goldman",
+        email: "gold@hotmail.com",
+      },
+      {
+        id: 864578,
+        firstName: "Tim",
+        lastName: "Burton",
+        email: "timmy.hotmail.com",
+      },
+    ];
 
-    if (inputs[inputs.length - 1], value) { //if we paste all code no need to press submit
-      submit.click();
-    }
-    const handleInput = (e) => {
-      console.log(e.target.nextElementSibling);
-    };
-    form.addEventListener("Input", handleInput)
 
-    const handlePaste = (e) => {
-      let past = e.clipboardData.getData("test");
-      console.log(paste);
-      inputs.forEach((input, index) => {
-        console.log(input);
-        input.value = paste[index]; //'4';
-      }) //nodelist can make iteration
-      inputs[paste.length - 1].focus();
-    }
-    inputs[0].addEventListener("paste", handlePaste);
+    users.forEach((el, index) => {
+      let myOrderedlist = document.createElement("ol");
+      myOrderedlist.innerHTML = `<li>${el.firstName}</li> <li>${el.lastName}</li>`;
+      myOrderedlist.setAttribute('data-id' , `${el.id}`);
+      myOrderedlist.style.listStyle = "none";
+      document.body.appendChild(myOrderedlist);
+    });
   </script>
-
 </body>
 
 </html>

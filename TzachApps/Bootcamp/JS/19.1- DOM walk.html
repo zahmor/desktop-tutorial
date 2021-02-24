@@ -39,34 +39,34 @@
 </body>
 <script>
   //1
-  const myLi = document.querySelector("li.strat-here")
-  console.log(myLi);
-//2
-const myLiNextSibling = myLi.nextElementSibling; 
-console.log(myLiNextSibling);
-const myUI = myLiNextSibling.firstElementChild;
-console.log(myUI);
-const subTitle = document.createElement('li');
-const subTitleText = document.createTextNode("subtitle 4");
-subTitle.appendChild(subTitleText);
-myUI.appendChild(subTitle);
+  const myLi = document.querySelector('li.start-here')
+  // console.log(myLi);
+  myLi.innerHTML = "main title";
 
-//3 delete last element
-const myLiParent = myLi.parentElement;
-console.log(myLiParent);
-myLiParent.lastElementChild.remove();
+  //2
+  const myLiNextSibling = myLi.nextElementSibling;
+  // console.log(myLiNextSibling);
+  const myUI = myLiNextSibling.firstElementChild;
+  // console.log(myUI);
+  const subTitle = document.createElement('li'); 
+  const subTitleText = document.createTextNode("sub title 4");  // or subTitle.textContent  ?
+  subTitle.appendChild(subTitleText);
+  myUI.appendChild(subTitle);
 
-//4change the title
-const head = document.head;
-const title = head.lastElementChild;  //document.head.querySelector("title");
-title.textContent="Master of the DOM";
+  //3 delete last element
+  const myLiParent = myLi.parentElement;
+  console.log(myLiParent);
+  myLiParent.lastElementChild.remove();
 
-//5
-const div = myLiParent.nextElementSibling;
-const p = div.firstElementChild;
-p.textContent= "now I know... "
+  //4change the title
+  const head = document.head;
+  const title = head.lastElementChild; //document.head.querySelector("title");
+  title.textContent = "Master of the DOM";
 
-
+  //5
+  const div = myLiParent.nextElementSibling;
+  const p = div.firstElementChild;
+  p.textContent = "now I know... "
 </script>
 
 </html>

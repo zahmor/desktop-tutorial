@@ -3,45 +3,128 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>19.2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>20 Dom Cardio</title>
 </head>
 
 <body>
-
-
-
   <script>
-    const form = document.querySelector("form[name-'verify']");
-    const inputs = document.querySelectorAll('inputs > input');
-    const submit = document.querySelectorAll("input[type='submit']");
-    console.log(form, inputs);
-    const input = e.target;
-    if (input.value && input.nextElementSibling) {
-      input.nextElementSibling.focus();
+    // Make a div
+    const div = document.createElement('div');
+    // add a class of wrapper to it
+    div.classList.add('wrapper');
+    // put it into the body
+    document.body.appendChild(div);
+
+    // make an unordered list
+    const ul = `<ul>
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+</ul>`;
+    // add three list items with the words "one, two three" in them
+    // put that list into the above wrapper
+    div.innerHTML = ul;
+
+    // create an image
+    const img = document.createElement('img');
+    // set the source to an image
+    img.src = 'https://picsum.photos/500';
+    // set the width to 250
+    img.width = 250;
+    img.height = 250;
+    // add a class of cute
+    img.classList.add('cute');
+    // add an alt of Cute Puppy
+    img.alt = 'Cute Puppy!';
+    // Append that image to the wrapper
+    div.appendChild(img);
+
+    // with HTML string, make a div, with two paragraphs inside of it
+    const myHTML = `
+  <div class="myDiv">
+    <p>Paragraph One</p>
+    <p>Paragraph Two</p>
+  </div>
+`;
+    const ulElement = div.querySelector('ul');
+    console.log(ulElement);
+    // put this div before the unordered list from above
+    ulElement.insertAdjacentHTML('beforebegin', myHTML);
+    // add a class to the second paragraph called warning
+    const myDiv = div.querySelector('.myDiv');
+    myDiv.children[1].classList.add('warning');
+    // remove the first paragraph
+    myDiv.firstElementChild.remove();
+
+    // create a function called generatePlayerCard that takes in three arguments: name, age, and height
+    function generatePlayerCard(name, age, height) {
+      const html = `
+    <div class="playerCard">
+      <h2>${name} — ${age}</h2>
+      <p>Their Height is ${height} and ${age} years old. In Dog years this person would be ${age *
+    7}. That would be a tall dog!
+        <button class="delete" type="button">&times; Delete</button>
+    </p>
+    </div>
+  `;
+      return html;
     }
 
-    if (inputs[inputs.length - 1], value) { //if we paste all code no need to press submit
-      submit.click();
-    }
-    const handleInput = (e) => {
-      console.log(e.target.nextElementSibling);
-    };
-    form.addEventListener("Input", handleInput)
+    // have that function return html that looks like this:
+    // <div class="playerCard">
+    //   <h2>NAME — AGE</h2>
+    //   <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
+    // </div>
 
-    const handlePaste = (e) => {
-      let past = e.clipboardData.getData("test");
-      console.log(paste);
-      inputs.forEach((input, index) => {
-        console.log(input);
-        input.value = paste[index]; //'4';
-      }) //nodelist can make iteration
-      inputs[paste.length - 1].focus();
+    // make a new div with a class of cards
+    const cards = document.createElement('div');
+    cards.classList.add('cards');
+    // Have that function make 4 cards
+    let cardsHTML = generatePlayerCard('wes', 12, 150);
+    cardsHTML += generatePlayerCard('scott', 12, 150);
+    cardsHTML += generatePlayerCard('kait', 12, 150);
+    cardsHTML += generatePlayerCard('snickers', 12, 150);
+
+    cards.innerHTML = cardsHTML;
+    div.insertAdjacentElement('beforebegin', cards);
+    // append those cards to the div
+    // put the div into the DOM just before the wrapper element
+    // Bonus, put a delete Button on each card so when you click it, the whole card is removed
+
+    // select all the buttons!
+    const buttons = document.querySelectorAll('.delete');
+    // make out delete function
+    function deleteCard(event) {
+      const buttonThatGotClicked = event.currentTarget;
+      // buttonThatGotClicked.parentElement.remove();
+      buttonThatGotClicked.closest('.playerCard').remove();
     }
-    inputs[0].addEventListener("paste", handlePaste);
+    // loop over them and attach a listener
+    buttons.forEach(button => button.addEventListener('click', deleteCard));
   </script>
 
+
+
+
 </body>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+  .playerCard {
+    background: white;
+    padding: 20px;
+  }
+
+  .playerCard h2 {
+    color: black;
+  }
+</style>
 
 </html>

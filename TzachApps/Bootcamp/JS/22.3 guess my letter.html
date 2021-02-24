@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>22.3</title>
+ </head>
+
+ <body>
+   <style>
+     #message.red {
+       color: red;
+     }
+
+     #message.green {
+       color: green;
+     }
+
+     #restart.hide {
+       display: none;
+     }
+   </style>
+   <div class="container">
+     <h1>Guess My Letter</h1>
+     <div id="answer">?</div>
+     <h2 id="message">Guess a key</h2>
+     <div id="restart" class="hide">
+       <h2>Play again?</h2>
+       <button>Yes</button>
+     </div>
+     <h3>Keys guessed</h3>
+     <div id="guessed-keys"></div>
+   </div>
+
+   <script>
+     const message = document.querySelector("#message");
+     const guessedKeysEl = document.querySelector("#guessed-keys");
+     const restartEl = document.querySelector("#restart");
+     const restartButton = document.querySelector("button");
+     const answer = document.querySelector("#answer");
+     const guessedKeys = [];
+     const guessedKey = (keyPressed) => {
+       guessedKeys.push(keyPressed);
+       guessedKeysEl.textContent = guessedKeys;
+     };
+     const randomLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+     console.log(randomLetter);
+     //1
+     document.addEventListener("keydown", (e) => {
+       if (restartEl.classList.contains("hide")) {
+         const key = e.key;
+         console.log(key);
+         if (!/^[A-Z]$/i.test(key)) {
+           return (message.textContent = "please enter a valid letter");
+         }
+         if (guessedKeys.includes(key)) {
+           return (message.textContent = "already guessed this letter");
+         }
+         if (randomLetter !== key) {
+           message.textContent = "Nope, wrong letter";
+           message.classList.add("red");
+           return guessedKey(key);
+         }
+         if (randomLetter === key) {
+           message.textContent = "Right letter!";
+           message.classList.add("green");
+           answer.textContent = randomLetter;
+           restartEl.classList.remove("hide");
+         }
+       }
+     });
+     const restart = () => {
+       message.textContent = " Guess a letter";
+       message.classList.remove("green");
+       message.classList.remove("red");
+       guessedKeys.splice(0, guessedKeys.length);
+       console.log(guessedKeys);
+       guessedKeysEl.textContent = guessedKeys;
+       answer.textContent = "?";
+
+       console.log("restart game");
+     };
+     restartButton.addEventListener("click", (e) => {
+       restartEl.classList.add("hide");
+       restart();
+     });
+   </script>
+ </body>
+
+ </html>

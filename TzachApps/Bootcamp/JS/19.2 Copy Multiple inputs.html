@@ -9,23 +9,42 @@
 </head>
 
 <body>
-
+  <h3>text to copy:</h3>
+  <h5>123456</h5>
+  <div class="container">
+    <form name='verify'>
+      <div class="inputs">
+        <input type="text" name='n1' maxlength='1' />
+        <input type="text" name='n2' maxlength='1' />
+        <input type="text" name='n3' maxlength='1' />
+        <input type="text" name='n4' maxlength='1' />
+        <input type="text" name='n5' maxlength='1' />
+        <input type="text" name='n6' maxlength='1' />
+      </div>
+      <div class="button-container">
+        <input type="submit" value="Verify">
+      </div>
+    </form>
+  </div>
 
 
   <script>
-    const form = document.querySelector("form[name-'verify']");
-    const inputs = document.querySelectorAll('inputs > input');
+    const form = document.querySelector("form");
+    const inputs = document.querySelectorAll('form > input');
     const submit = document.querySelectorAll("input[type='submit']");
-    console.log(form, inputs);
-    const input = e.target;
-    if (input.value && input.nextElementSibling) {
-      input.nextElementSibling.focus();
-    }
+    console.log(inputs);
+
+
 
     if (inputs[inputs.length - 1], value) { //if we paste all code no need to press submit
       submit.click();
     }
+
     const handleInput = (e) => {
+      const input = e.target;
+      if (input.value && input.nextElementSibling) {
+        input.nextElementSibling.focus();
+      }
       console.log(e.target.nextElementSibling);
     };
     form.addEventListener("Input", handleInput)
